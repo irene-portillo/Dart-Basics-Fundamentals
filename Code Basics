@@ -2,7 +2,7 @@ void main() {
   // VARIABLES  
   String name = 'this is a string.. why is it red';
   print(name);
-  
+
   // calling function 
   String greet = greeting();
   int age = getAge();
@@ -10,32 +10,38 @@ void main() {
   print(greet);
   print(age);
   print(color);
-  
+
   // LISTS  
   List names = ['joe', 'jamie', 'jamiero'];
   print(names);
-  
+
   names.add('lugi');
   print(names);
   names.remove('joe');
-  
+
   print(names);
   names.add(30); // mixing data types is bad practice but works
-  
+
   // instead, try making the list a single type 
   List<String> stringNames = ['kat', 'bat'];
   // can no longer add diff types to this 
-  
+
   // Setting the CLASS
- User userOne = User('luigi', 25);
- print(userOne.username);
+  User userOne = User('luigi', 25);
+  print(userOne.username);
   userOne.login();
-  
- User userTwo = User('mario', 28);
+
+  User userTwo = User('mario', 28);
   print(userTwo.username);
+
+  // Making class with inheritance
+  SuperUser userThree = SuperUser('SUPER USER WOOO', 20 );
+  print(userThree.username);
+  userThree.publish();
+  userThree.login();
 }
 
-// setting the cass !
+// setting CLASS !
 class User{ 
   late String username;  // update: at 21:30 on vid -- prog was updated so now have to add 
                          // 'late' as in front bc it will be used later, otherwise needs to 
@@ -53,14 +59,24 @@ class User{
   }
 }
 
-
-
+// INHERITANCE 
+class SuperUser extends User{
+  
+  // pass in values from User 
+  SuperUser(String username, int age): super(username, age);  
+  
+  // method   
+  void publish(){
+    print('published update! ');
+  }
+}
 
 // making a FUNCTION  
 String greeting(){
   return 'hello';
 }
 
+// making a FUNCTION  
 int getAge(){
   return 30;
 }
