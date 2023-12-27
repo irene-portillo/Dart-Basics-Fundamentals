@@ -1,5 +1,9 @@
 void main() {
   // VARIABLES  
+  dynamic mutableVariable = 20;
+  mutableVariable = 'this can change type bc dynamic, but IS NOT ADVISED';
+  print(mutableVariable);
+
   String name = 'this is a string.. why is it red';
   print(name);
 
