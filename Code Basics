@@ -1,0 +1,28 @@
+void main() {
+  // VARIABLES  
+  String name = 'this is a string.. why is it red';
+  print(name);
+  
+  // calling function 
+  String greet = greeting();
+  int age = getAge();
+  String color = getColor();
+  print(greet);
+  print(age);
+  print(color);
+    
+ 
+}
+
+
+// making a FUNCTION  
+String greeting(){
+  return 'hello';
+}
+
+int getAge(){
+  return 30;
+}
+
+// single line function created !
+String getColor() => 'purple';
